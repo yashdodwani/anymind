@@ -30,7 +30,7 @@ If Qdrant is unavailable, the backend fails loudly on startup.
 
 ## SDK Usage (Read‑Only)
 ```python
-from mantlememo import Agent
+from anymind import Agent
 
 agent = Agent(
     agent_id="agent_123",
@@ -75,7 +75,7 @@ This repo still includes a web3 UI flow and contract integration, but it is **no
 - **Contract**: `0x4287F8a28AC24FF1b0723D26747CBE7F39C9C167`
 - **Explorer**: [View on Explorer](https://sepolia.etherscan.io/address/0x4287F8a28AC24FF1b0723D26747CBE7F39C9C167)
 
-## What MantleMemo is NOT
+## What Anymind is NOT
 
 * ❌ No model fine-tuning
 * ❌ No raw data on-chain
