@@ -1,0 +1,439 @@
+/* Mantle-inspired component styles - Modern Web3 Theme */
+
+/* Glass Morphism Base */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Button Styles */
+.btn-mantle {
+  @apply px-6 py-3 rounded-2xl text-base text-white transition-all duration-250 ease-in-out transform hover:scale-[1.02];
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-mantle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.btn-mantle-primary {
+  @apply px-6 py-3 rounded-2xl text-base text-black transition-all duration-250 ease-in-out transform hover:scale-[1.03];
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #14b8a6, #22e1c3, #2fd8ff);
+  box-shadow: 0 0 24px rgba(47, 216, 255, 0.35);
+  border: none;
+}
+
+.btn-mantle-primary:hover {
+  box-shadow: 0 0 32px rgba(47, 216, 255, 0.5);
+  transform: scale(1.03);
+}
+
+.btn-mantle-secondary {
+  @apply px-6 py-3 rounded-2xl text-base text-mantle-300 transition-all duration-250 ease-in-out transform hover:scale-[1.02];
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+.btn-mantle-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.btn-mantle-accent {
+  @apply px-6 py-3 rounded-2xl text-base text-black transition-all duration-250 ease-in-out transform hover:scale-[1.03];
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #14b8a6, #22e1c3);
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+  border: none;
+}
+
+.btn-mantle-accent:hover {
+  box-shadow: 0 0 28px rgba(20, 184, 166, 0.45);
+}
+
+/* Card Styles */
+.card-mantle {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-mantle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+.card-mantle-dark {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-mantle-light {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Floating Code Block */
+.code-block-floating {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.code-block-floating::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* Status HUD */
+.status-hud {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Input Styles */
+.input-mantle {
+  @apply w-full px-4 py-3 rounded-2xl text-white placeholder-mantle-600 focus:outline-none transition-all duration-200 ease-in-out;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.input-mantle:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(20, 184, 166, 0.4);
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.2);
+}
+
+/* Select dropdown styling */
+.input-mantle option {
+  background: #1f2937;
+  color: white;
+  padding: 8px 12px;
+}
+
+.input-mantle select {
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+}
+
+.input-mantle-light {
+  @apply w-full px-4 py-3 rounded-2xl text-white placeholder-mantle-600 focus:outline-none transition-all duration-200 ease-in-out;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation Styles */
+.nav-link-mantle {
+  @apply text-mantle-400 hover:text-mantle-300 transition-all duration-200 ease-in-out;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.nav-link-mantle:hover {
+  text-shadow: 0 0 8px rgba(20, 184, 166, 0.3);
+}
+
+.nav-link-mantle-active {
+  @apply text-mantle-300;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 12px rgba(20, 184, 166, 0.4);
+}
+
+.nav-link-mantle-light {
+  @apply text-mantle-500 hover:text-mantle-400 transition-colors duration-200 ease-in-out;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Badge Styles */
+.badge-mantle {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm text-mantle-300;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(20, 184, 166, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+.badge-accent {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm text-mantle-400;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(20, 184, 166, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.badge-mantle-light {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm text-mantle-400;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Status Indicators */
+.status-success {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs text-mantle-300;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(20, 184, 166, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.status-warning {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs text-mantle-400;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(20, 184, 166, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.status-error {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs text-mantle-500;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Layout Utilities */
+.section-padding {
+  @apply px-6 py-16 lg:px-8 lg:py-24;
+}
+
+.container-mantle {
+  @apply max-w-7xl mx-auto px-6 lg:px-8;
+}
+
+/* Typography */
+.heading-xl {
+  @apply text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading-lg {
+  @apply text-3xl lg:text-4xl font-bold text-white leading-tight;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading-md {
+  @apply text-2xl lg:text-3xl font-semibold text-white leading-tight;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading-sm {
+  @apply text-xl lg:text-2xl font-semibold text-white;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-body {
+  @apply text-base lg:text-lg text-mantle-300 leading-relaxed;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-muted {
+  @apply text-sm text-mantle-400;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Light theme typography variants */
+.heading-xl-light {
+  @apply text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading-lg-light {
+  @apply text-3xl lg:text-4xl font-bold text-white leading-tight;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading-md-light {
+  @apply text-2xl lg:text-3xl font-semibold text-white leading-tight;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading-sm-light {
+  @apply text-xl lg:text-2xl font-semibold text-white;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-body-light {
+  @apply text-base lg:text-lg text-mantle-400 leading-relaxed;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Glow Effects */
+.glow-teal {
+  position: relative;
+}
+
+.glow-teal::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.glow-primary {
+  position: relative;
+}
+
+.glow-primary::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background: radial-gradient(circle, rgba(47, 216, 255, 0.2) 0%, transparent 70%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-300 ease-in-out hover:scale-[1.02];
+}
+
+.hover-glow {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+/* Floating Navigation */
+.nav-floating {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

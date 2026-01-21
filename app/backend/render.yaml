@@ -1,0 +1,72 @@
+services:
+  - type: web
+    name: anymind-backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /health
+    envVars:
+      # Note: PORT is automatically set by Render - don't override it
+      - key: HOST
+        value: 0.0.0.0
+      - key: DEBUG
+        value: false
+      - key: ENVIRONMENT
+        value: production
+      # CORS Configuration - Frontend URLs (comma-separated)
+      - key: CORS_ORIGINS
+        value: https://mantlememo.vercel.app,https://www.mantlememo.vercel.app,http://localhost:8080,http://localhost:5173
+      
+      # Supabase Configuration
+      - key: SUPABASE_URL
+        sync: false  # Set this manually in Render dashboard
+      - key: SUPABASE_KEY
+        sync: false  # Set this manually in Render dashboard (anon key)
+      - key: SUPABASE_SERVICE_KEY
+        sync: false  # Set this manually in Render dashboard
+      
+      # LLM API Keys
+      - key: OPENROUTER_API_KEY
+        sync: false  # Set this manually in Render dashboard
+      - key: OPENAI_API_KEY
+        sync: false  # Set this manually in Render dashboard (optional)
+      - key: ANTHROPIC_API_KEY
+        sync: false  # Set this manually in Render dashboard (optional)
+      - key: MISTRAL_API_KEY
+        sync: false  # Set this manually in Render dashboard (optional)
+      
+      # Memory & Search Services
+      - key: MEM0_API_KEY
+        sync: false  # Set this manually in Render dashboard
+      - key: TAVILY_API_KEY
+        sync: false  # Set this manually in Render dashboard
+      
+      # Redis/Upstash Configuration
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false  # Set this manually in Render dashboard
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false  # Set this manually in Render dashboard
+      - key: KV_REST_API_URL
+        sync: false  # Alternative name for Redis URL
+      - key: KV_REST_API_TOKEN
+        sync: false  # Alternative name for Redis token
+      - key: REDIS_URL
+        sync: false  # Full Redis connection string (optional)
+      
+      # Ethereum Network Configuration (Sepolia Testnet - change for production)
+      - key: ETHEREUM_RPC_URL
+        value: https://rpc.sepolia.org
+      - key: ETHEREUM_CHAIN_ID
+        value: 11155111
+      - key: ETHEREUM_NETWORK
+        value: ethereum-sepolia-testnet
+      - key: MANTLEMEMO_CONTRACT_ADDRESS
+        value: 0x4287F8a28AC24FF1b0723D26747CBE7F39C9C167
+      
+      # JWT Configuration
+      - key: SECRET_KEY
+        generateValue: true  # Render will generate a secure key
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 30
+

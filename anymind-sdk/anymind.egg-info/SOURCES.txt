@@ -1,0 +1,12 @@
+README.md
+setup.py
+anymind/__init__.py
+anymind/agent.py
+anymind/client.py
+anymind/errors.py
+anymind/types.py
+anymind.egg-info/PKG-INFO
+anymind.egg-info/SOURCES.txt
+anymind.egg-info/dependency_links.txt
+anymind.egg-info/requires.txt
+anymind.egg-info/top_level.txt
